@@ -7,8 +7,6 @@
 
 A responsive web application for practicing AWS certification exams with persistent score tracking.
 
-![App Screenshot](./public/screenshot.png) *(Replace with actual screenshot)*
-
 ## ✨ Features
 
 - **Exam Simulation**
