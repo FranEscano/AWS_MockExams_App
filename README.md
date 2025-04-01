@@ -73,42 +73,7 @@ A responsive web application for practicing AWS certification exams with persist
 
 ## 📂 Project Structure
 
-aws-cert-practice/
-├── public/                  # Static assets
-|   ├── exams/
-|   |   ├── exam1.md
-|   |   ├── exam2.md
-|   |   └── ...
-|   └── jsonExams/
-|       ├── exam1.json
-|       ├── exam2.json
-|       └── ...
-├── script/
-|   └── convertExams.ts
-├── src/
-│   ├── **tests**/           # Unit tests
-|   |   └── App.test.tsx
-│   ├── components/          # React components
-│   │   ├── **tests**/
-|   │   │   ├── ExamResults.test.tsx
-|   │   │   ├── ExamSelector.test.tsx
-|   │   │   └── ExamView.test.tsx
-│   │   ├── ExamResults.css
-│   │   ├── ExamResults.tsx  # Results display
-│   │   ├── ExamSelector.tsx # Exam dropdown
-│   │   ├── ExamView.css
-│   │   ├── ExamView.tsx     # Question interface
-│   │   └── HistoryPanel.tsx # Score history
-│   ├── utils/
-│   │   ├── **tests**/
-|   │   │   └── ExamUtils.test.tsx
-│   │   └── convertMdToJson.tsx
-│   ├── App.css
-│   ├── App.tsx              # Root component
-│   ├── index.css
-│   └── index.tsx            # Entry point
-├── package.json
-└── README.md
+![alt text](image.png)
 
 ## 🧪 Testing
 
@@ -146,5 +111,5 @@ Distributed under the MIT License. See LICENSE for more information.
 
 ## ✉️ Contact
 
-Francisco Bejarano Escano - <francisco.escano@2itesting.com>
-Project Link: <https://github.com/FranEscano/AWS_MockExams_App.git>
+- Francisco Bejarano Escano - <francisco.escano@2itesting.com>
+- Project Link: <https://github.com/FranEscano/AWS_MockExams_App.git>
