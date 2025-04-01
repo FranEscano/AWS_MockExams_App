@@ -149,4 +149,4 @@ Distributed under the MIT License. See LICENSE for more information.
 ## ✉️ Contact
 
 Your Name - <francisco.escano@2itesting.com>
-Project Link: <https://github.com/your-username/aws-cert-practice>
+Project Link: <https://github.com/FranEscano/AWS_MockExams_App.git>
