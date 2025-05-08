@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Definición estricta de tipos
+// Strict type definitions for QuestionOption and Question
 type QuestionOption = {
   text: string;
   correct: boolean;
@@ -15,6 +15,7 @@ type Question = {
   explanation?: string;
 };
 
+// Type definition for ExamData
 type ExamData = {
   title: string;
   questions: Question[];
@@ -22,16 +23,18 @@ type ExamData = {
   createdAt?: string;
 };
 
-// Tipo explícito para currentQuestion
+// Explicit type for currentQuestion
 type CurrentQuestion = {
   text: string;
   options: QuestionOption[];
 };
 
+// Function to parse markdown content into ExamData
 export const parseMarkdown = (markdown: string): ExamData => {
+  // Split markdown into lines and trim whitespace
   const lines = markdown.split('\n').map(line => line.trim()).filter(line => line.length > 0);
-  
-  // Extraer título
+
+  // Extract title from markdown
   const title = lines.find(line => line.startsWith('# '))?.replace('# ', '').trim() || 'Untitled Exam';
 
   const questions: Question[] = [];
@@ -39,9 +42,9 @@ export const parseMarkdown = (markdown: string): ExamData => {
   let correctAnswers: string[] = [];
 
   for (const line of lines) {
-    // Detectar nueva pregunta
+    // Detect new question
     if (/^\d+\./.test(line)) {
-      // Guardar pregunta anterior si existe
+      // Save previous question if it exists
       if (currentQuestion?.options?.length) {
         questions.push({
           id: questions.length,
@@ -51,7 +54,7 @@ export const parseMarkdown = (markdown: string): ExamData => {
         });
       }
 
-      // Iniciar nueva pregunta
+      // Start new question
       currentQuestion = {
         text: line.replace(/^\d+\.\s*/, ''),
         options: []
@@ -60,11 +63,11 @@ export const parseMarkdown = (markdown: string): ExamData => {
       continue;
     }
 
-    // Detectar opciones
+    // Detect options
     if (line.startsWith('- ') && currentQuestion) {
       const optionText = line.substring(2).trim();
       const letterMatch = optionText.match(/^([A-E])\./);
-      
+
       currentQuestion.options.push({
         text: optionText,
         correct: false
@@ -72,11 +75,11 @@ export const parseMarkdown = (markdown: string): ExamData => {
       continue;
     }
 
-    // Detectar respuestas correctas
+    // Detect correct answers
     if (line.startsWith('Correct answer: ') && currentQuestion) {
       correctAnswers = line.split(': ')[1].split(/,\s*/).map(a => a.trim());
-      
-      // Marcar opciones correctas
+
+      // Mark correct options
       currentQuestion.options.forEach(opt => {
         const letterMatch = opt.text.match(/^([A-E])\./);
         if (letterMatch && correctAnswers.includes(letterMatch[1])) {
@@ -86,13 +89,13 @@ export const parseMarkdown = (markdown: string): ExamData => {
       continue;
     }
 
-    // Detectar explicaciones
+    // Detect explanations
     if (line.startsWith('Explanation: ') && questions.length > 0) {
       questions[questions.length - 1].explanation = line.split('Explanation: ')[1];
     }
   }
 
-  // Añadir la última pregunta si existe
+  // Add the last question if it exists
   if (currentQuestion?.options?.length) {
     questions.push({
       id: questions.length,
@@ -109,27 +112,34 @@ export const parseMarkdown = (markdown: string): ExamData => {
   };
 };
 
+// Function to convert all markdown exams to JSON format
 const convertAllExams = async (): Promise<void> => {
   const mdDir = path.join(__dirname, '../../public/exams');
   const jsonDir = path.join(__dirname, '../../public/jsonExams');
 
+  // Create JSON directory if it doesn't exist
   if (!fs.existsSync(jsonDir)) {
     fs.mkdirSync(jsonDir, { recursive: true });
   }
 
   try {
+    // Read all files in the markdown directory
     const files = await fs.promises.readdir(mdDir);
     const mdFiles = files.filter(file => file.endsWith('.md'));
-    
+
+    // Convert each markdown file to JSON
     await Promise.all(mdFiles.map(async (file) => {
       const mdPath = path.join(mdDir, file);
       const jsonPath = path.join(jsonDir, file.replace('.md', '.json'));
 
       try {
+        // Read markdown file content
         const data = await fs.promises.readFile(mdPath, 'utf8');
+        // Parse markdown content to ExamData
         const examData = parseMarkdown(data);
         examData.sourceFile = file;
-        
+
+        // Write ExamData to JSON file
         await fs.promises.writeFile(jsonPath, JSON.stringify(examData, null, 2));
         console.log(`Converted ${file} successfully`);
       } catch (error) {
