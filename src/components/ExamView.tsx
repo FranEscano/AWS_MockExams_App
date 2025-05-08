@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ExamView.css";
 
-// Define the structure of a Question object
 interface Question {
   id: number;
   text: string;
@@ -10,30 +9,20 @@ interface Question {
   explanation?: string;
 }
 
-// Define the props for the ExamView component
 interface ExamViewProps {
   examId: string;
   onFinishExam: (score: number, title: string) => void;
 }
 
-// Main ExamView component
 const ExamView: React.FC<ExamViewProps> = ({ examId, onFinishExam }) => {
-  // State to store the list of questions
-  const [questions, setQuestions] = useState([]);
-  // State to store the user's answers
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<{ [key: number]: string[] }>({});
-  // State to manage loading status
-  const [isLoading, setIsLoading] = useState(true);
-  // State to handle errors
-  const [error, setError] = useState("");
-  // State to control the display of results
-  const [showResults, setShowResults] = useState(false);
-  // State to store the user's score
-  const [score, setScore] = useState(0);
-  // State to store the exam title
-  const [examTitle, setExamTitle] = useState("");
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>("");
+  const [showResults, setShowResults] = useState<boolean>(false);
+  const [score, setScore] = useState<number>(0);
+  const [examTitle, setExamTitle] = useState<string>("");
 
-  // Fetch exam data when the component mounts or examId changes
   useEffect(() => {
     const fetchExam = async () => {
       try {
@@ -60,7 +49,6 @@ const ExamView: React.FC<ExamViewProps> = ({ examId, onFinishExam }) => {
     fetchExam();
   }, [examId]);
 
-  // Handle changes in user's answers
   const handleAnswerChange = (
     questionId: number,
     optionText: string,
@@ -79,7 +67,6 @@ const ExamView: React.FC<ExamViewProps> = ({ examId, onFinishExam }) => {
     });
   };
 
-  // Calculate the user's score based on their answers
   const calculateScore = () => {
     let correctCount = 0;
 
@@ -104,89 +91,105 @@ const ExamView: React.FC<ExamViewProps> = ({ examId, onFinishExam }) => {
     return Math.round((correctCount / questions.length) * 100);
   };
 
-  // Handle the submission of the exam
   const handleSubmit = () => {
     const finalScore = calculateScore();
     setScore(finalScore);
     setShowResults(true);
   };
 
-  // Handle finishing the exam and passing the score to the parent component
   const handleFinish = () => {
     onFinishExam(score, examTitle);
   };
 
-  // Render loading state
-  if (isLoading) return "Loading Exam...";
-  // Render error state
-  if (error) return `{error}`;
-  // Render no questions state
+  if (isLoading) return <div className="loading">Loading Exam...</div>;
+  if (error) return <div className="error">{error}</div>;
   if (questions.length === 0)
-    return "There Are No Questions for this Exam";
+    return <div className="error">There Are No Questions for this Exam</div>;
 
-  // Render the exam view
   return (
-    <div>
-      <h1>{examTitle}</h1>
+    <div className="exam-container">
+      <h2 className="exam-title">{examTitle}</h2>
 
-      {questions.map((question) => (
-        <div key={question.id}>
-          <h2>
-            {question.id + 1}. {question.text}
-          </h2>
-          <p>
-            {question.type === "multiple"
-              ? "[Multiple answers]"
-              : "[One Answer]"}
-          </p>
+      <div className="questions-list">
+        {questions.map((question) => (
+          <div
+            key={question.id}
+            className={`question-card ${showResults ? "show-answers" : ""}`}
+          >
+            <div className="question-header">
+              <h3>
+                {question.id + 1}. {question.text}
+              </h3>
+              <span className="question-type">
+                {question.type === "multiple"
+                  ? "[Multiple answers]"
+                  : "[One Answer]"}
+              </span>
+            </div>
 
-          <ul>
-            {question.options.map((option, idx) => {
-              const isSelected = answers[question.id]?.includes(option.text);
-              const isCorrect = option.correct;
-              const showCorrect = showResults && isCorrect;
-              const showIncorrect = showResults && isSelected && !isCorrect;
+            <div className="options-container">
+              {question.options.map((option, idx) => {
+                const isSelected = answers[question.id]?.includes(option.text);
+                const isCorrect = option.correct;
+                const showCorrect = showResults && isCorrect;
+                const showIncorrect = showResults && isSelected && !isCorrect;
 
-              return (
-                <li key={idx}>
-                  <input
-                    type={question.type === "multiple" ? "checkbox" : "radio"}
-                    name={`question-${question.id}`}
-                    value={option.text}
-                    checked={isSelected}
-                    onChange={() =>
-                      handleAnswerChange(
-                        question.id,
-                        option.text,
-                        question.type === "multiple"
-                      )
-                    }
-                    disabled={showResults}
-                  />
-                  {option.text}
-                  {showCorrect && " ✓"}
-                  {showIncorrect && " ✗"}
-                </li>
-              );
-            })}
-          </ul>
+                return (
+                  <label
+                    key={idx}
+                    className={`option-label 
+                      ${isSelected ? "selected" : ""}
+                      ${showCorrect ? "correct" : ""}
+                      ${showIncorrect ? "incorrect" : ""}
+                    `}
+                  >
+                    <input
+                      type={question.type === "single" ? "radio" : "checkbox"}
+                      name={`question-${question.id}`}
+                      checked={isSelected || false}
+                      onChange={() =>
+                        handleAnswerChange(
+                          question.id,
+                          option.text,
+                          question.type === "multiple"
+                        )
+                      }
+                      disabled={showResults}
+                    />
+                    <span className="option-text">{option.text}</span>
+                    {showCorrect && <span className="correct-mark">✓</span>}
+                    {showIncorrect && <span className="incorrect-mark">✗</span>}
+                  </label>
+                );
+              })}
+            </div>
 
-          {showResults && question.explanation && (
-            <p>
-              <strong>Explanation:</strong> {question.explanation}
-            </p>
-          )}
-        </div>
-      ))}
-
+            {showResults && question.explanation && (
+              <div className="explanation">
+                <strong>Explanation:</strong> {question.explanation}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
       {showResults ? (
-        <div>
-          <h2>Answers Summary</h2>
-          <p>Score: {score}%</p>
-          <button onClick={handleFinish}>End Exam</button>
+        <div className="results-summary">
+          <h3>Answers Summary</h3>
+          <div className="score-display">
+            Score: <span>{score}%</span>
+          </div>
+          <button onClick={handleFinish} className="finish-button">
+            End Exam
+          </button>
         </div>
       ) : (
-        <button onClick={handleSubmit}>Mark Exam</button>
+        <button
+          onClick={handleSubmit}
+          disabled={Object.keys(answers).length !== questions.length}
+          className="submit-button"
+        >
+          Mark Exam
+        </button>
       )}
     </div>
   );

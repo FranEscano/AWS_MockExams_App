@@ -135,3 +135,28 @@
     font-weight: bold;
     color: #228be6;
 }
+
+.dark-mode .question-card {
+    background: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .option-label:hover {
+    background: #777575;
+}
+
+.dark-mode .option-label.selected {
+    background: #3c3c3d;
+    border-color: #6f7172;
+}
+
+.dark-mode .option-label.correct {
+    background: #043b0e;
+    border-color: #40c057;
+}
+
+.dark-mode .option-label.incorrect {
+    background: #4e0303;
+    border-color: #ff8787;
+}

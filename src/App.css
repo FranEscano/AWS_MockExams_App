@@ -190,3 +190,51 @@
   padding: 2rem;
   text-align: center;
 }
+
+/* Dark Mode style */
+.dark-mode .App-header {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode .main-container {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .exam-selector,
+.dark-mode .history-panel,
+.dark-mode .question {
+  background: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .exam-dropdown {
+  background: #333333;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+.dark-mode .history-panel li {
+  border-bottom: 1px solid #333333;
+}
+
+.dark-mode .score-circle {
+  background: #388e3c;
+}
+
+.dark-mode .submit-button,
+.dark-mode .finish-button {
+  background: #ff9900;
+  color: #ffffff;
+}
+
+.dark-mode .submit-button:disabled {
+  background: #555555;
+  cursor: not-allowed;
+}
+
+.dark-mode .explanation {
+  background: #2e2e2e;
+}

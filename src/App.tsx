@@ -28,6 +28,22 @@ const App: React.FC = () => {
   // State to store the title of the completed exam
   const [examTitle, setExamTitle] = useState<string>("");
 
+  // State to manage dark mode
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  // Load dark mode preference from localStorage
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    if (savedMode) {
+      setDarkMode(JSON.parse(savedMode));
+    }
+  }, []);
+
+  // Save dark mode preference to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  }, [darkMode]);
+
   // Save history to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("examHistory", JSON.stringify(history));
@@ -63,9 +79,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
+    <div className={darkMode ? "App dark-mode" : "App light-mode"}>
       <header className="App-header">
         <h1>AWS Certification Practice</h1>
+        <button onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        </button>
       </header>
       <div className="main-container">
         <div className="sidebar">
