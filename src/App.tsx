@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import "./App.css";
 import ExamSelector from "./components/ExamSelector";
 import ExamView from "./components/ExamView";
@@ -30,6 +31,9 @@ const App: React.FC = () => {
 
   // State to manage dark mode
   const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  // State to manage authentication
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
   // Load dark mode preference from localStorage
   useEffect(() => {
@@ -78,6 +82,18 @@ const App: React.FC = () => {
     setExamFinished(false);
   };
 
+  // Handle login
+  const handleLogin = async (username: string, password: string) => {
+    try {
+      const response = await axios.post('/auth/login', { username, password });
+      if (response.status === 200) {
+        setIsAuthenticated(true);
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
+  };
+
   return (
     <div className={darkMode ? "App dark-mode" : "App light-mode"}>
       <header className="App-header">
@@ -95,14 +111,26 @@ const App: React.FC = () => {
           <HistoryPanel history={history} />
         </div>
         <div className="content">
-          {/* Display welcome message if no exam is selected */}
-          {!selectedExam ? (
+          {!isAuthenticated ? (
+            <div className="login-form">
+              <h2>Login</h2>
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                const username = (e.target as any).username.value;
+                const password = (e.target as any).password.value;
+                handleLogin(username, password);
+              }}>
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <button type="submit">Login</button>
+              </form>
+            </div>
+          ) : !selectedExam ? (
             <div className="welcome-message">
               <h2>Welcome to AWS Cloud Practitioner Mock Exams</h2>
               <p>Select an Exam from Sidebar Dropdown</p>
             </div>
           ) : examFinished ? (
-            // Display exam results if the exam is finished
             <ExamResults
               score={finalScore}
               examName={selectedExam}
@@ -110,7 +138,6 @@ const App: React.FC = () => {
               onRestart={handleRestart}
             />
           ) : (
-            // Display the exam view if an exam is selected and not finished
             <ExamView examId={selectedExam} onFinishExam={handleExamFinish} />
           )}
         </div>
