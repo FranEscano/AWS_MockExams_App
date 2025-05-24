@@ -23,7 +23,7 @@ const ExamView: React.FC<ExamViewProps> = ({ examId, onFinishExam }) => {
   const [showResults, setShowResults] = useState<boolean>(false);
   const [score, setScore] = useState<number>(0);
   const [examTitle, setExamTitle] = useState<string>("");
-  const EXAM_DURATION = 5 * 60; // 65 minutos en segundos
+  const EXAM_DURATION = 65 * 60; // 65 minutos en segundos
   const TOTAL_QUESTIONS = 65;
 
   const [timeLeft, setTimeLeft] = useState(EXAM_DURATION);
