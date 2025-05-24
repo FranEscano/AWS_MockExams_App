@@ -192,6 +192,9 @@
 }
 
 /* Dark Mode style */
+.App.dark-mode {
+  background-color: #121212;
+}
 .dark-mode .App-header {
   background-color: #1a1a1a;
   color: #ffffff;
@@ -237,4 +240,15 @@
 
 .dark-mode .explanation {
   background: #2e2e2e;
+}
+
+/* Variables para la barra de progreso */
+:root {
+  --progress-bg: #e0e0e0;
+  --progress-fill: #4CAF50;
+  /* Verde AWS */
+  --time-fill: #2196F3;
+  /* Azul AWS */
+  --time-critical: #FF9900;
+  /* Naranja AWS (alertas) */
 }

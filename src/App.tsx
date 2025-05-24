@@ -4,6 +4,7 @@ import ExamSelector from "./components/ExamSelector";
 import ExamView from "./components/ExamView";
 import HistoryPanel from "./components/HistoryPanel";
 import ExamResults from "./components/ExamResults";
+import "./styles/global.css";
 
 // Define the structure of a history entry
 interface HistoryEntry {
