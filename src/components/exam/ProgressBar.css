@@ -1,9 +1,9 @@
-/* Estilos Light Mode (por defecto) */
 .progress-container {
     background-color: #f8f9fa;
     border-radius: 8px;
     padding: 0.8rem;
     width: 100%;
+    /* Asegurar ancho completo */
 }
 
 .progress-section {
@@ -21,7 +21,6 @@
 .progress-percent {
     font-weight: bold;
     color: #232f3e;
-    /* Azul AWS */
 }
 
 .time-label {
@@ -31,74 +30,43 @@
 
 .time-critical {
     color: #d13212;
-    /* Rojo AWS */
     font-weight: bold;
 }
 
+/* Barras de progreso - Cambios clave */
 .progress-bar {
     height: 6px;
     background-color: #e9ecef;
     border-radius: 3px;
     overflow: hidden;
     width: 100%;
+    /* Asegurar ancho completo */
     position: relative;
+    /* Necesario para el fill */
 }
 
 .progress-fill {
     background-color: #ff9900;
-    /* Naranja AWS */
     height: 100%;
     position: absolute;
+    /* Posicionamiento absoluto */
     left: 0;
     top: 0;
     transition: width 0.3s ease;
+    /* Animación suave */
     min-width: 0.5%;
+    /* Mínimo visible */
 }
 
 .time-fill {
     background-color: #232f3e;
-    /* Azul AWS */
     height: 100%;
     position: absolute;
+    /* Posicionamiento absoluto */
     left: 0;
     top: 0;
     transition: width 0.3s ease;
+    /* Animación suave */
     min-width: 0.5%;
-}
-
-/* ---------------------------------- */
-/* Estilos Dark Mode */
-/* ---------------------------------- */
-.dark-mode .progress-container {
-    background-color: #2d2d2d;
-    border: 1px solid #444;
-}
-
-.dark-mode .progress-label,
-.dark-mode .time-label {
-    color: #e0e0e0;
-}
-
-.dark-mode .progress-percent {
-    color: #ff9900;
-    /* Naranja AWS */
-}
-
-.dark-mode .time-critical {
-    color: #ff6b6b;
-    /* Rojo más claro para mejor contraste */
-}
-
-.dark-mode .progress-bar {
-    background-color: #444;
-}
-
-.dark-mode .progress-fill {
-    background-color: #ff9900;
-    /* Naranja AWS (mismo que light) */
-}
-
-.dark-mode .time-fill {
-    background-color: #74b3ff;
-    /* Azul más claro para dark mode */
+    /* Mínimo visible */
 }

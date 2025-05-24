@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { ProgressBar } from "./exam/ProgressBar";
 import "./ExamView.css";
 
 interface Question {
@@ -22,6 +23,49 @@ const ExamView: React.FC<ExamViewProps> = ({ examId, onFinishExam }) => {
   const [showResults, setShowResults] = useState<boolean>(false);
   const [score, setScore] = useState<number>(0);
   const [examTitle, setExamTitle] = useState<string>("");
+  const EXAM_DURATION = 5 * 60; // 65 minutos en segundos
+  const TOTAL_QUESTIONS = 65;
+
+  const [timeLeft, setTimeLeft] = useState(EXAM_DURATION);
+  const [currentQuestion, setCurrentQuestion] = useState(1);
+
+  const questionsRef = useRef<HTMLDivElement>(null);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (questionsRef.current) {
+        const questionElements =
+          questionsRef.current.querySelectorAll(".question-card");
+        let visibleIndex = 0;
+
+        questionElements.forEach((el, index) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            visibleIndex = index;
+          }
+        });
+
+        setCurrentQuestionIndex(visibleIndex + 1); // +1 porque empieza en 0
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [questions]);
+
+  // Temporizador
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const answeredCount = Object.keys(answers).length;
+    setCurrentQuestionIndex(Math.max(answeredCount, currentQuestionIndex));
+  }, [answers]);
 
   useEffect(() => {
     const fetchExam = async () => {
@@ -108,6 +152,14 @@ const ExamView: React.FC<ExamViewProps> = ({ examId, onFinishExam }) => {
 
   return (
     <div className="exam-container">
+      <div className="progress-bar-container">
+        <ProgressBar
+          currentQuestion={currentQuestionIndex}
+          totalQuestions={questions.length}
+          timeLeft={timeLeft}
+          duration={EXAM_DURATION}
+        />
+      </div>
       <h2 className="exam-title">{examTitle}</h2>
 
       <div className="questions-list">
