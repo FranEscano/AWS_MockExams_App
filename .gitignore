@@ -7,12 +7,15 @@
 
 # testing
 /coverage
+/jest-report
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -21,3 +24,73 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Mac OS specific files
+.AppleDouble
+.LSOverride
+
+# Coverage directory (for test coverage reports)
+coverage/
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Build output of vite (if you use it)
+/dist
+
+# Supabase config (if any local credentials)
+/supabase/config/*.json
+
+# Misc
+*.pem
+*.key
+
+# Optional dotenv environment variables files
+.env.*
+
+# Parcel cache
+.cache
+
+# Firebase
+.firebase/
+
+# Next.js build output (if applicable)
+/.next
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Lock files (optional - usually you commit these)
+/package-lock.json
+/yarn.lock
