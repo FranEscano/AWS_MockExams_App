@@ -22,7 +22,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. AWS Management Console. This is the web-based interface for managing AWS resources."
     },
     {
       "id": 1,
@@ -45,7 +46,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Horizontal scaling involves adding more instances of the same size to distribute load, while vertical scaling (A/B/C) involves upgrading existing instances."
     },
     {
       "id": 2,
@@ -68,7 +70,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. AWS CloudTrail logs API calls and user actions, providing an audit trail of who terminated instances."
     },
     {
       "id": 3,
@@ -95,7 +98,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and E. Reliability in AWS includes automatic scaling (B) to maintain availability and rapid recovery (E) from failures."
     },
     {
       "id": 4,
@@ -118,7 +122,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. The Shared Responsibility Model divides tasks between AWS and the customer, with AWS managing security 'of' the cloud (infrastructure) and customers managing security 'in' the cloud (data, OS, etc.)."
     },
     {
       "id": 5,
@@ -141,7 +146,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Consolidated billing allows Reserved Instance discounts to be shared across all linked accounts, reducing hourly costs."
     },
     {
       "id": 6,
@@ -164,7 +170,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Multi-Region deployment provides the highest availability by protecting against Region-wide failures, while multiple AZs protect against data center failures."
     },
     {
       "id": 7,
@@ -191,7 +198,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and E. AWS Snowball offers edge computing (A) for local data processing and secure data transfer (E) for large datasets."
     },
     {
       "id": 8,
@@ -214,7 +222,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. The AWS Support Concierge is a dedicated team for Enterprise Support customers to assist with billing and account issues."
     },
     {
       "id": 9,
@@ -237,7 +246,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Deploying resources in a Region closer to end users (e.g., US Region for US users) reduces latency. This is more cost-effective than building a data center (C)."
     },
     {
       "id": 10,
@@ -260,7 +270,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. IAM user groups allow administrators to assign permissions to multiple users at once, simplifying team management."
     },
     {
       "id": 11,
@@ -283,7 +294,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. AWS Database Migration Service (DMS) enables seamless migration of databases to AWS with minimal downtime or impact on the source database."
     },
     {
       "id": 12,
@@ -306,7 +318,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Elasticity allows resources to scale up/down automatically based on demand, optimizing costs."
     },
     {
       "id": 13,
@@ -333,7 +346,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and E. AWS provides agility (A) through rapid provisioning and manages physical/network security (E), though customers must still secure their data and applications."
     },
     {
       "id": 14,
@@ -356,7 +370,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Decoupling components (e.g., using SQS or Lambda) isolates failures and improves fault tolerance."
     },
     {
       "id": 15,
@@ -379,7 +394,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. AWS Cost & Usage Reports provide detailed billing data, including EC2 usage history."
     },
     {
       "id": 16,
@@ -402,7 +418,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Consolidated billing combines usage across accounts, potentially qualifying for volume discounts."
     },
     {
       "id": 17,
@@ -429,7 +446,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and C. EBS snapshots (B) provide backups, and encryption (C) protects data at rest. AWS manages physical security (E)."
     },
     {
       "id": 18,
@@ -452,7 +470,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Elasticity ensures resources scale automatically to match demand, optimizing cost and performance."
     },
     {
       "id": 19,
@@ -479,7 +498,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and C. CloudWatch billing alarms (A) and AWS Budgets (C) can trigger alerts when costs exceed a threshold."
     },
     {
       "id": 20,
@@ -502,7 +522,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. CloudFront uses Edge Locations (global CDN nodes) to cache and deliver content closer to users."
     },
     {
       "id": 21,
@@ -525,7 +546,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. The Principle of Least Privilege minimizes security risks by restricting permissions to only what is necessary."
     },
     {
       "id": 22,
@@ -548,7 +570,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. AWS does not classify its services under 'Networking as a Service' (NaaS). The main models are IaaS, PaaS, and SaaS."
     },
     {
       "id": 23,
@@ -571,7 +594,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Glacier Deep Archive is the lowest-cost storage for rarely accessed data (e.g., compliance archives)."
     },
     {
       "id": 24,
@@ -594,7 +618,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Amazon Route 53 is AWS's scalable DNS and domain registration service."
     },
     {
       "id": 25,
@@ -621,7 +646,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and D. AWS Shield (A) protects against DDoS attacks, and AWS WAF (D) filters malicious web traffic."
     },
     {
       "id": 26,
@@ -644,7 +670,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. ElastiCache (Redis/Memcached) is an in-memory cache for frequently accessed data, reducing latency."
     },
     {
       "id": 27,
@@ -667,7 +694,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. On-demand instances are ideal for short-term, uninterrupted workloads with no long-term commitment."
     },
     {
       "id": 28,
@@ -690,7 +718,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Spot Instances offer the lowest cost for fault-tolerant, interruptible workloads like batch processing."
     },
     {
       "id": 29,
@@ -713,7 +742,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Amazon CloudFront is AWS's CDN service, caching content at Edge Locations for low-latency delivery."
     },
     {
       "id": 30,
@@ -736,7 +766,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. AWS Artifact provides access to AWS compliance documents and agreements."
     },
     {
       "id": 31,
@@ -763,7 +794,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and C. DynamoDB (NoSQL) and EMR (big data) are fully managed. EC2 (E) and VPC (A) require customer management."
     },
     {
       "id": 32,
@@ -786,7 +818,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. DynamoDB is AWS's fully managed NoSQL database service."
     },
     {
       "id": 33,
@@ -809,7 +842,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Enterprise Support includes a dedicated TAM for personalized guidance."
     },
     {
       "id": 34,
@@ -832,7 +866,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. AWS Cost Explorer provides visualizations and reports for cost analysis."
     },
     {
       "id": 35,
@@ -855,7 +890,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. AWS CLI requires access keys (access key ID and secret access key) for authentication."
     },
     {
       "id": 36,
@@ -878,7 +914,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. The AWS Abuse team handles reports of malicious activity or compromised resources."
     },
     {
       "id": 37,
@@ -905,7 +942,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and D. Shared controls (e.g., patching, configuration) are jointly managed by AWS and the customer."
     },
     {
       "id": 38,
@@ -932,7 +970,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and B. Elastic Load Balancing (A) distributes traffic, and Auto Scaling (B) replaces failed instances automatically."
     },
     {
       "id": 39,
@@ -955,7 +994,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. CloudFront's CDN caches videos at Edge Locations for low-latency global delivery."
     },
     {
       "id": 40,
@@ -978,7 +1018,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Amazon Aurora (MySQL-compatible) provides automated backups and point-in-time recovery."
     },
     {
       "id": 41,
@@ -1001,7 +1042,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. AWS CloudFormation allows infrastructure to be defined and provisioned using templates (infrastructure as code)."
     },
     {
       "id": 42,
@@ -1024,7 +1066,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. AWS manages the security 'of' the cloud (e.g., physical infrastructure, networking hardware)."
     },
     {
       "id": 43,
@@ -1051,7 +1094,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and E. The AWS Health Dashboard provides personalized alerts (E) and remediation guidance (A) for AWS-related issues."
     },
     {
       "id": 44,
@@ -1074,7 +1118,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. CloudWatch monitors EC2 performance metrics (e.g., CPU, network) and can trigger alarms for outages."
     },
     {
       "id": 45,
@@ -1097,7 +1142,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Trusted Advisor provides real-time security best practice checks and recommendations."
     },
     {
       "id": 46,
@@ -1124,7 +1170,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and D. S3 is storage-only (B: cannot run applications) and scales automatically (D: no manual scaling needed)."
     },
     {
       "id": 47,
@@ -1151,7 +1198,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: D and E. Customers manage identity/password policies (D) and security groups/NACLs (E). AWS handles physical security (B) and infrastructure patching (C)."
     },
     {
       "id": 48,
@@ -1174,7 +1222,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. AWS Quick Starts are pre-built templates for deploying third-party technologies like IBM MQ rapidly."
     },
     {
       "id": 49,
@@ -1197,7 +1246,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Convertible RIs allow exchange for another RI with different attributes (e.g., instance type) while retaining the billing benefit."
     }
   ],
   "createdAt": "2025-04-01T11:33:14.311Z",
