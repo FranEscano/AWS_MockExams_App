@@ -6,24 +6,21 @@ import HistoryPanel from "./components/HistoryPanel";
 import ExamResults from "./components/ExamResults";
 import "./styles/global.css";
 
-// Supabase Auth
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { supabase } from "./supabaseClient";
 import { useAuth } from "./AuthProvider";
 
-// Define the structure of a history entry
 interface HistoryEntry {
   exam: string;
   title: string;
-  score: number;
+  score: number | null;
   date: string;
+  mode?: "test" | "study";
 }
 
 const App: React.FC = () => {
-  const { session } = useAuth(); // 🔐 acceso al estado de sesión
-
-  // State to store the selected exam ID
+  const { session } = useAuth();
   const [selectedExam, setSelectedExam] = useState<string | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>(() => {
     const savedHistory = localStorage.getItem("examHistory");
@@ -32,7 +29,6 @@ const App: React.FC = () => {
   const [examFinished, setExamFinished] = useState<boolean>(false);
   const [finalScore, setFinalScore] = useState<number>(0);
   const [examTitle, setExamTitle] = useState<string>("");
-
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
@@ -58,11 +54,13 @@ const App: React.FC = () => {
 
   const handleExamFinish = (score: number, title: string) => {
     if (selectedExam) {
-      const newEntry = {
+      const mode = (localStorage.getItem("aws_mode") as "test" | "study") || "test";
+      const newEntry: HistoryEntry = {
         exam: selectedExam,
         title: title || selectedExam,
-        score,
+        score: mode === "test" ? score : null,
         date: new Date().toLocaleDateString(),
+        mode,
       };
       setHistory([...history, newEntry]);
       setFinalScore(score);
@@ -76,7 +74,6 @@ const App: React.FC = () => {
     setExamFinished(false);
   };
 
-  // 🔐 Mostrar formulario de login si no hay sesión
   if (!session) {
     return (
       <div className="App auth-container">
@@ -102,7 +99,6 @@ const App: React.FC = () => {
           <button onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           </button>
-          {/* 🔐 Botón para cerrar sesión */}
           <button onClick={() => supabase.auth.signOut()}>Logout</button>
         </div>
       </header>
