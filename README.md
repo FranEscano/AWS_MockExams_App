@@ -13,56 +13,68 @@ A responsive web application for practicing AWS certification exams with cloud-b
 ## ✨ Features
 
 ### 📝 Exam Simulation
-- 23+ AWS practice exams
-- Timed exam mode
-- Multiple question types (single/multiple choice)
-- Instant scoring after submission
+
+* 23+ AWS practice exams
+* Two usage modes: **Test Mode** and **Study Mode**
+* Timed exam mode (Test)
+* Immediate feedback and explanations (Study)
+* Multiple question types (single/multiple choice)
+* Instant scoring after submission (Test)
 
 ### 📊 Progress Tracking
-- Score and history stored in **Supabase** (cloud database)
-- User-specific exam attempts with timestamps
-- Visual indicators of performance
+
+* Score and history stored in **Supabase** (cloud database)
+* User-specific exam attempts with timestamps
+* Tracks mode used per attempt
+* Visual indicators of performance
 
 ### 🔐 User Authentication
-- Sign up / Log in with email & password
-- Protected routes and session persistence
-- Hosted with **Supabase Auth**
+
+* Sign up / Log in with email & password
+* Protected routes and session persistence
+* Hosted with **Supabase Auth**
 
 ### 💻 User Experience
-- Clean, intuitive interface
-- Mobile-friendly responsive layout
-- Restart, resume, or view past attempts
+
+* Clean, intuitive interface
+* Mobile-friendly responsive layout
+* Restart, resume, or view past attempts
 
 ---
 
 ## 🛠️ Technologies
 
 ### Frontend
-- React 18 (with TypeScript)
-- CSS Modules
-- Context API + Hooks
+
+* React 18 (with TypeScript)
+* CSS Modules
+* Context API + Hooks
 
 ### Backend & Auth
-- Supabase Auth (GoTrue)
-- Supabase Database (PostgreSQL)
+
+* Supabase Auth (GoTrue)
+* Supabase Database (PostgreSQL)
 
 ### Testing
-- Jest
-- React Testing Library
-- Code coverage reporting
+
+* Jest
+* React Testing Library
+* Code coverage reporting
 
 ### Tooling
-- Create React App
-- Prettier + ESLint
-- ts-node for exam data conversion
+
+* Create React App
+* Prettier + ESLint
+* ts-node for exam data conversion
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js v16+
-- npm v8+
+
+* Node.js v16+
+* npm v8+
 
 ### Installation
 
@@ -73,35 +85,42 @@ npm install
 ```
 
 ### Setup Supabase
+
 1. Create a Supabase project.
 2. Add environment variables:
-  - REACT_APP_SUPABASE_URL
-  - REACT_APP_SUPABASE_ANON_KEY
+
+* REACT\_APP\_SUPABASE\_URL
+* REACT\_APP\_SUPABASE\_ANON\_KEY
+
 3. Ensure your Supabase instance includes:
-  - exam_history table
-  - Email/password auth enabled
+
+* exam\_history table
+* Email/password auth enabled
 
 ### Convert Exam Data
+
 ```bash
 npm run convert:exams
 ```
 
 ### Start the App
+
 ```bash
 npm start
 ```
-Visit: http://localhost:3000
+
+Visit: [http://localhost:3000](http://localhost:3000)
 
 🧪 Testing
+
 ```bash
-Copy
-Edit
 npm test            # Run all tests
 npm run test:watch  # Watch mode
 npm run test:coverage  # Generate coverage report
 ```
 
 ## 📂 Project Structure
+
 ```bash
 ├── src/
 │   ├── components/
@@ -120,11 +139,13 @@ npm run test:coverage  # Generate coverage report
 ```
 
 ## 🛠️ Build for Production
+
 ```bash
 npm run build
 ```
 
 ## 🤝 Contributing
+
 1. Fork the project
 2. Create your feature branch (git checkout -b feature/AmazingFeature)
 3. Commit your changes (git commit -m 'Add amazing feature')
@@ -132,8 +153,10 @@ npm run build
 5. Open a Pull Request
 
 ## 📜 License
+
 Distributed under the MIT License. See LICENSE for more information.
 
 ## ✉️ Contact
-- Francisco Bejarano Escano - francisco.escano@2itesting.com
-- GitHub Repo: FranEscano/AWS_MockExams_App
+
+* Francisco Bejarano Escano - [francisco.escano@2itesting.com](mailto:francisco.escano@2itesting.com)
+* GitHub Repo: FranEscano/AWS\_MockExams\_App
