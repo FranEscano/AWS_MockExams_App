@@ -26,7 +26,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: A, C. Amazon EFS provides scalable file storage for use with EC2."
     },
     {
       "id": 1,
@@ -49,7 +50,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. See AWS documentation for more details."
     },
     {
       "id": 2,
@@ -72,7 +74,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. This model offers cost savings in exchange for commitment."
     },
     {
       "id": 3,
@@ -95,7 +98,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. This helps optimize resource allocation and cost."
     },
     {
       "id": 4,
@@ -118,7 +122,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Amazon EBS offers block-level storage volumes for EC2."
     },
     {
       "id": 5,
@@ -141,7 +146,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. See AWS documentation for more details."
     },
     {
       "id": 6,
@@ -168,7 +174,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: C, E. DynamoDB is a multi-AZ, serverless NoSQL database."
     },
     {
       "id": 7,
@@ -195,11 +202,12 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: B, D. Multi-AZ enhances availability with automatic failover."
     },
     {
       "id": 8,
-      "text": "Sarah has deployed an application in the Northern California (us-west-1) region. After examining the application’s traffic, she notices that about 30% of the traffic is coming from Asia. What can she do to reduce latency for the users in Asia?",
+      "text": "Sarah has deployed an application in the Northern California (us-west-1) region. After examining the application\u2019s traffic, she notices that about 30% of the traffic is coming from Asia. What can she do to reduce latency for the users in Asia?",
       "options": [
         {
           "text": "A. Replicate the current resources across multiple Availability Zones within the same region.",
@@ -218,7 +226,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. CloudFront caches content at Edge Locations for lower latency."
     },
     {
       "id": 9,
@@ -241,7 +250,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. See AWS documentation for more details."
     },
     {
       "id": 10,
@@ -264,7 +274,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. EC2 provides infrastructure-level access to computing resources."
     },
     {
       "id": 11,
@@ -287,7 +298,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Decoupling components increases application resiliency."
     },
     {
       "id": 12,
@@ -310,7 +322,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Amazon S3 is an object storage service with high availability."
     },
     {
       "id": 13,
@@ -321,7 +334,7 @@
           "correct": true
         },
         {
-          "text": "B. Dynamic websites’ assets.",
+          "text": "B. Dynamic websites\u2019 assets.",
           "correct": false
         },
         {
@@ -337,7 +350,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: A, C. See AWS documentation for more details."
     },
     {
       "id": 14,
@@ -360,7 +374,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. See AWS documentation for more details."
     },
     {
       "id": 15,
@@ -383,7 +398,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Amazon Inspector checks EC2 instances for vulnerabilities."
     },
     {
       "id": 16,
@@ -410,7 +426,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: D, E. AWS manages environmental protections in its data centers."
     },
     {
       "id": 17,
@@ -433,11 +450,12 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. See AWS documentation for more details."
     },
     {
       "id": 18,
-      "text": "Your application has recently experienced significant global growth, and international users are complaining of high latency. What is the AWS characteristic that can help improve your international users’ experience?",
+      "text": "Your application has recently experienced significant global growth, and international users are complaining of high latency. What is the AWS characteristic that can help improve your international users\u2019 experience?",
       "options": [
         {
           "text": "A. Elasticity.",
@@ -456,7 +474,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. AWS has infrastructure in multiple geographic regions."
     },
     {
       "id": 19,
@@ -483,7 +502,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: D, E. See AWS documentation for more details."
     },
     {
       "id": 20,
@@ -506,7 +526,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. See AWS documentation for more details."
     },
     {
       "id": 21,
@@ -533,7 +554,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: A, D. Provides real-time cost optimization recommendations."
     },
     {
       "id": 22,
@@ -556,7 +578,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. AWS CLI allows scripting AWS service management."
     },
     {
       "id": 23,
@@ -583,7 +606,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: C, E. AWS VPN uses IPSec to securely connect networks."
     },
     {
       "id": 24,
@@ -606,7 +630,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. See AWS documentation for more details."
     },
     {
       "id": 25,
@@ -629,7 +654,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. See AWS documentation for more details."
     },
     {
       "id": 26,
@@ -656,7 +682,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: B, E. Security Groups act as virtual firewalls for EC2 instances."
     },
     {
       "id": 27,
@@ -679,7 +706,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. A data warehouse service optimized for complex queries."
     },
     {
       "id": 28,
@@ -702,7 +730,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. TCO includes costs like servers, storage, and facilities."
     },
     {
       "id": 29,
@@ -725,7 +754,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. See AWS documentation for more details."
     },
     {
       "id": 30,
@@ -752,7 +782,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: A, B. Different types have different pricing based on specs."
     },
     {
       "id": 31,
@@ -775,7 +806,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. An AMI contains configuration info to launch identical EC2 instances."
     },
     {
       "id": 32,
@@ -798,11 +830,12 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. SCPs allow managing permissions across AWS accounts."
     },
     {
       "id": 33,
-      "text": "Which of the following statements describes the AWS Cloud’s agility?",
+      "text": "Which of the following statements describes the AWS Cloud\u2019s agility?",
       "options": [
         {
           "text": "A. AWS allows you to host your applications in multiple regions around the world.",
@@ -821,7 +854,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. See AWS documentation for more details."
     },
     {
       "id": 34,
@@ -848,7 +882,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: A, C. RDS automates many database management tasks."
     },
     {
       "id": 35,
@@ -871,7 +906,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Uses IPSec for secure network connections."
     },
     {
       "id": 36,
@@ -894,7 +930,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Provides 24/7 access to technical support engineers."
     },
     {
       "id": 37,
@@ -921,7 +958,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: A, E. NACLs control traffic at the subnet level."
     },
     {
       "id": 38,
@@ -944,7 +982,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. See AWS documentation for more details."
     },
     {
       "id": 39,
@@ -967,7 +1006,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. See AWS documentation for more details."
     },
     {
       "id": 40,
@@ -990,7 +1030,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. See AWS documentation for more details."
     },
     {
       "id": 41,
@@ -1013,7 +1054,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Amazon Route 53 enables domain registration and DNS routing."
     },
     {
       "id": 42,
@@ -1040,7 +1082,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: A, D. Automates infrastructure deployment using templates."
     },
     {
       "id": 43,
@@ -1063,7 +1106,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Provides real-time cost optimization recommendations."
     },
     {
       "id": 44,
@@ -1086,7 +1130,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Simplifies VPC interconnectivity at scale."
     },
     {
       "id": 45,
@@ -1113,7 +1158,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answer: B, D. See AWS documentation for more details."
     },
     {
       "id": 46,
@@ -1136,7 +1182,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Prices may vary across different AZs."
     },
     {
       "id": 47,
@@ -1159,7 +1206,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Best for short-term, uninterrupted workloads."
     },
     {
       "id": 48,
@@ -1182,7 +1230,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. See AWS documentation for more details."
     },
     {
       "id": 49,
@@ -1205,7 +1254,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. See AWS documentation for more details."
     }
   ],
   "createdAt": "2025-04-01T11:33:14.454Z",

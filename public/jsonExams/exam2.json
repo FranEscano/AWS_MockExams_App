@@ -22,7 +22,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. AWS Organizations allows centralized management of multiple AWS accounts, including consolidated billing and security policies."
     },
     {
       "id": 1,
@@ -45,7 +46,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Amazon S3 is AWS's object storage service, while EBS/EFS are block/file storage respectively."
     },
     {
       "id": 2,
@@ -68,7 +70,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. AWS Auto Scaling automatically adjusts EC2 capacity based on demand to optimize costs."
     },
     {
       "id": 3,
@@ -91,7 +94,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. S3 Intelligent-Tiering automatically moves objects between tiers based on access patterns, ideal for unpredictable usage."
     },
     {
       "id": 4,
@@ -114,7 +118,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. DynamoDB is AWS's fully managed NoSQL database service for key-value and document data."
     },
     {
       "id": 5,
@@ -137,7 +142,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. On-demand instances have no startup fees - you only pay for compute capacity by the second/hour."
     },
     {
       "id": 6,
@@ -164,7 +170,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and B. Trusted Advisor checks security best practices, while Inspector performs automated security assessments."
     },
     {
       "id": 7,
@@ -187,7 +194,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Multi-Factor Authentication (MFA) adds an extra layer of protection beyond just passwords."
     },
     {
       "id": 8,
@@ -210,7 +218,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Infrastructure Event Management (IEM) provides architectural guidance for high-traffic events."
     },
     {
       "id": 9,
@@ -233,7 +242,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Amazon RDS manages routine database tasks like backups, patching, and recovery automatically."
     },
     {
       "id": 10,
@@ -248,7 +258,7 @@
           "correct": false
         },
         {
-          "text": "C. Automate wherever possible to make architectural (© ) experimentation easier.",
+          "text": "C. Automate wherever possible to make architectural experimentation easier.",
           "correct": true
         },
         {
@@ -256,7 +266,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Automation enables rapid iteration and experimentation with architectures."
     },
     {
       "id": 11,
@@ -279,7 +290,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. AWS allows customers to test their own EC2 instances without prior approval."
     },
     {
       "id": 12,
@@ -302,11 +314,12 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Amazon Simple Queue Service (SQS) provides reliable message queuing for decoupled systems."
     },
     {
       "id": 13,
-      "text": "The principle “design for failure and nothing will fail” is very important when designing your AWS Cloud architecture. Which of the following would help adhere to this principle? (Choose TWO)",
+      "text": "The principle \"design for failure and nothing will fail\" is very important when designing your AWS Cloud architecture. Which of the following would help adhere to this principle? (Choose TWO)",
       "options": [
         {
           "text": "A. Multi-factor authentication.",
@@ -329,7 +342,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and C. Using multiple AZs (B) and ELB (C) creates redundancy to handle failures."
     },
     {
       "id": 14,
@@ -352,11 +366,12 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Amazon Virtual Private Cloud (VPC) provides isolated network environments."
     },
     {
       "id": 15,
-      "text": "According to the AWS Shared responsibility model, which of the following are the responsibility of the customer? (Choose TWO)",
+      "text": "According to the AWS Shared Responsibility Model, which of the following are the responsibility of the customer? (Choose TWO)",
       "options": [
         {
           "text": "A. Managing environmental events of AWS data centers.",
@@ -379,7 +394,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and E. Customers manage data protection (B) and application management (E), while AWS handles physical security."
     },
     {
       "id": 16,
@@ -406,7 +422,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: D and E. EC2 provides virtual servers, while Lambda runs serverless functions."
     },
     {
       "id": 17,
@@ -429,7 +446,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Amazon S3 is ideal for storing and retrieving unstructured data like photos/videos."
     },
     {
       "id": 18,
@@ -452,7 +470,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Access keys (access key ID + secret access key) authenticate API/CLI requests."
     },
     {
       "id": 19,
@@ -475,7 +494,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. ElastiCache provides Redis/Memcached for low-latency, in-memory caching."
     },
     {
       "id": 20,
@@ -498,7 +518,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. AWS Organizations centralizes account management with consolidated billing and policy enforcement."
     },
     {
       "id": 21,
@@ -521,7 +542,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Dedicated Hosts allow you to use existing server-bound software licenses (BYOL)."
     },
     {
       "id": 22,
@@ -544,7 +566,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Cloud computing converts capital expenses (CapEx) to operational expenses (OpEx)."
     },
     {
       "id": 23,
@@ -571,7 +594,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: D and E. Automation (D) and fault tolerance (E) are core AWS design principles."
     },
     {
       "id": 24,
@@ -594,7 +618,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. AWS Direct Connect provides dedicated network connections bypassing the public internet."
     },
     {
       "id": 25,
@@ -617,7 +642,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Multiple VPCs provide complete network isolation between projects."
     },
     {
       "id": 26,
@@ -640,7 +666,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. AWS Web Application Firewall (WAF) protects against common web exploits like SQL injection."
     },
     {
       "id": 27,
@@ -663,7 +690,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Amazon EMR provides managed Hadoop/Spark frameworks for big data processing."
     },
     {
       "id": 28,
@@ -690,7 +718,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: C and E. AWS manages the hypervisor (C) and physical hardware (E) in the cloud."
     },
     {
       "id": 29,
@@ -713,7 +742,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. EC2 provides the most control as it's Infrastructure-as-a-Service (IaaS)."
     },
     {
       "id": 30,
@@ -736,7 +766,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. IAM users access the console with username/password (API/CLI requires access keys)."
     },
     {
       "id": 31,
@@ -759,7 +790,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. Amazon Machine Images (AMIs) serve as templates for launching EC2 instances."
     },
     {
       "id": 32,
@@ -786,7 +818,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and C. Cloud provides built-in fault tolerance (B) and global distribution (C)."
     },
     {
       "id": 33,
@@ -813,7 +846,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: D and E. AWS manages physical security (E) and hardware maintenance (D)."
     },
     {
       "id": 34,
@@ -836,7 +870,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Operational Excellence focuses on monitoring, processes, and continuous improvement."
     },
     {
       "id": 35,
@@ -847,7 +882,7 @@
           "correct": false
         },
         {
-          "text": "B. Edge locations are used by CloudFront to improve your end users’ experience when uploading files.",
+          "text": "B. Edge locations are used by CloudFront to improve your end users' experience when uploading files.",
           "correct": false
         },
         {
@@ -859,7 +894,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Edge Locations cache content but don't distribute traffic across instances (that's ELB's function)."
     },
     {
       "id": 36,
@@ -886,7 +922,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and E. CloudTrail logs API calls while Config tracks resource configurations over time."
     },
     {
       "id": 37,
@@ -909,7 +946,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Amazon Elastic Container Service (ECS) is AWS's managed container orchestration service."
     },
     {
       "id": 38,
@@ -932,7 +970,8 @@
           "correct": true
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: D. CloudTrail provides audit logs of all API calls for compliance purposes."
     },
     {
       "id": 39,
@@ -955,7 +994,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Matching storage classes (e.g., Intelligent-Tiering, Glacier) to access patterns optimizes costs."
     },
     {
       "id": 40,
@@ -982,7 +1022,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and C. Auto Scaling (B) and ELB (C) distribute workloads across healthy instances."
     },
     {
       "id": 41,
@@ -1005,11 +1046,12 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. Auto Scaling optimizes costs by matching capacity to actual demand."
     },
     {
       "id": 42,
-      "text": "What is the AWS service/feature that takes advantage of Amazon CloudFront’s globally distributed edge locations to transfer files to S3 with higher upload speeds?",
+      "text": "What is the AWS service/feature that takes advantage of Amazon CloudFront's globally distributed edge locations to transfer files to S3 with higher upload speeds?",
       "options": [
         {
           "text": "A. S3 Transfer Acceleration.",
@@ -1028,7 +1070,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. S3 Transfer Acceleration uses CloudFront edge locations as fast upload endpoints."
     },
     {
       "id": 43,
@@ -1051,7 +1094,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Security Groups act as stateful firewalls at the instance level."
     },
     {
       "id": 44,
@@ -1078,7 +1122,8 @@
           "correct": true
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: B and E. Global Accelerator (B) and CloudFront (E) optimize traffic routing through AWS's global network."
     },
     {
       "id": 45,
@@ -1105,7 +1150,8 @@
           "correct": false
         }
       ],
-      "type": "multiple"
+      "type": "multiple",
+      "explanation": "Correct answers: A and C. Customers manage data/schema (A) and configuration (C), while AWS handles backups/patches."
     },
     {
       "id": 46,
@@ -1128,7 +1174,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: C. Amazon RDS is ideal for migrating structured relational databases to AWS."
     },
     {
       "id": 47,
@@ -1151,7 +1198,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: A. APN Consulting Partners provide AWS architecture guidance and implementation services."
     },
     {
       "id": 48,
@@ -1174,7 +1222,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. AWS Lambda runs code without provisioning or managing servers."
     },
     {
       "id": 49,
@@ -1197,7 +1246,8 @@
           "correct": false
         }
       ],
-      "type": "single"
+      "type": "single",
+      "explanation": "Correct answer: B. Fault tolerance ensures continued operation despite component failures."
     }
   ],
   "createdAt": "2025-04-01T11:33:14.400Z",
